@@ -14,6 +14,7 @@
 		D082DA761A6FA252002EF828 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D082DA741A6FA252002EF828 /* LaunchScreen.xib */; };
 		D082DA821A6FA252002EF828 /* SwiftStudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D082DA811A6FA252002EF828 /* SwiftStudyTests.swift */; };
 		D082DA8C1A6FA260002EF828 /* JEUtilityKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D082DA8B1A6FA260002EF828 /* JEUtilityKit.swift */; };
+		D082DA8E1A6FA9DF002EF828 /* ViewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D082DA8D1A6FA9DF002EF828 /* ViewsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		D082DA801A6FA252002EF828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D082DA811A6FA252002EF828 /* SwiftStudyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftStudyTests.swift; sourceTree = "<group>"; };
 		D082DA8B1A6FA260002EF828 /* JEUtilityKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JEUtilityKit.swift; sourceTree = "<group>"; };
+		D082DA8D1A6FA9DF002EF828 /* ViewsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				D082DA6B1A6FA252002EF828 /* AppDelegate.swift */,
 				D082DA6D1A6FA252002EF828 /* ViewController.swift */,
+				D082DA8D1A6FA9DF002EF828 /* ViewsController.swift */,
 				D082DA8B1A6FA260002EF828 /* JEUtilityKit.swift */,
 				D082DA6F1A6FA252002EF828 /* Main.storyboard */,
 				D082DA721A6FA252002EF828 /* Images.xcassets */,
@@ -217,6 +220,7 @@
 			files = (
 				D082DA6E1A6FA252002EF828 /* ViewController.swift in Sources */,
 				D082DA6C1A6FA252002EF828 /* AppDelegate.swift in Sources */,
+				D082DA8E1A6FA9DF002EF828 /* ViewsController.swift in Sources */,
 				D082DA8C1A6FA260002EF828 /* JEUtilityKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

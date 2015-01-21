@@ -17,39 +17,56 @@ class ViewController: UIViewController,UITableViewDataSource ,UITableViewDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.dataArray = NSMutableArray(array: [NSString]())
+//        self.dataArray = NSMutableArray(array: [NSString]())
         
-        tableView = UITableView(frame: CGRectMake(0, 20, ScreenWidth, ScreenHeight - 20), style: UITableViewStyle.Plain)
+        tableView = UITableView(frame: CGRectMake(0, 0, ScreenWidth, ScreenHeight), style: UITableViewStyle.Grouped)
         
         self.view.addSubview(tableView!)
         
         tableView!.dataSource = self
         tableView!.delegate = self
         
-        self.dataArray?.insertObject("常用控件", atIndex: 0)
+//        self.dataArray?.insertObject("常用控件", atIndex: 0)
         
-
+        self.dataArray = NSMutableArray(objects: ["UI控件","函数"],["集合","类别"],["扩展","运算"],["继承","代理"])
+        var obj = self.dataArray![0] as NSArray;
+        
         
         tableView?.reloadData()
         
     }
     
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return dataArray!.count;
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return self.dataArray!.count;
     }
     
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return dataArray![section].count;
+    }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyTestCell")
-        var title = self.dataArray![indexPath.row] as NSString
+        var title = self.dataArray![indexPath.section][indexPath.row] as NSString
         cell.textLabel.text = title;
+        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator;
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        var title = self.dataArray![indexPath.section][indexPath.row] as NSString
+
+        var viewController:UIViewController?
         
+        if(title.isEqualToString("UI控件")){
+            viewController = ViewsController()
+        }
+        
+        if (viewController != nil){
+            viewController?.navigationItem.title = title
+            self.navigationController?.pushViewController(viewController!, animated: true)
+        }
+
     }
   
     override func didReceiveMemoryWarning() {
