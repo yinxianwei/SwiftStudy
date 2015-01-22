@@ -15,6 +15,9 @@
 		D082DA821A6FA252002EF828 /* SwiftStudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D082DA811A6FA252002EF828 /* SwiftStudyTests.swift */; };
 		D082DA8C1A6FA260002EF828 /* JEUtilityKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D082DA8B1A6FA260002EF828 /* JEUtilityKit.swift */; };
 		D082DA8E1A6FA9DF002EF828 /* ViewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D082DA8D1A6FA9DF002EF828 /* ViewsController.swift */; };
+		D0E7ED771A70F5690055941D /* FuncAndBlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E7ED761A70F5690055941D /* FuncAndBlockViewController.swift */; };
+		D0E7ED791A70F5BD0055941D /* abc.gif in Resources */ = {isa = PBXBuildFile; fileRef = D0E7ED781A70F5BD0055941D /* abc.gif */; };
+		D0E7ED7B1A70F6B30055941D /* abc.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E7ED7A1A70F6B30055941D /* abc.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		D082DA811A6FA252002EF828 /* SwiftStudyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftStudyTests.swift; sourceTree = "<group>"; };
 		D082DA8B1A6FA260002EF828 /* JEUtilityKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JEUtilityKit.swift; sourceTree = "<group>"; };
 		D082DA8D1A6FA9DF002EF828 /* ViewsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewsController.swift; sourceTree = "<group>"; };
+		D0E7ED761A70F5690055941D /* FuncAndBlockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuncAndBlockViewController.swift; sourceTree = "<group>"; };
+		D0E7ED781A70F5BD0055941D /* abc.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = abc.gif; sourceTree = "<group>"; };
+		D0E7ED7A1A70F6B30055941D /* abc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = abc.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +87,12 @@
 		D082DA681A6FA252002EF828 /* SwiftStudy */ = {
 			isa = PBXGroup;
 			children = (
+				D0E7ED7A1A70F6B30055941D /* abc.png */,
+				D0E7ED781A70F5BD0055941D /* abc.gif */,
 				D082DA6B1A6FA252002EF828 /* AppDelegate.swift */,
 				D082DA6D1A6FA252002EF828 /* ViewController.swift */,
 				D082DA8D1A6FA9DF002EF828 /* ViewsController.swift */,
+				D0E7ED761A70F5690055941D /* FuncAndBlockViewController.swift */,
 				D082DA8B1A6FA260002EF828 /* JEUtilityKit.swift */,
 				D082DA6F1A6FA252002EF828 /* Main.storyboard */,
 				D082DA721A6FA252002EF828 /* Images.xcassets */,
@@ -199,7 +208,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D082DA711A6FA252002EF828 /* Main.storyboard in Resources */,
+				D0E7ED791A70F5BD0055941D /* abc.gif in Resources */,
 				D082DA761A6FA252002EF828 /* LaunchScreen.xib in Resources */,
+				D0E7ED7B1A70F6B30055941D /* abc.png in Resources */,
 				D082DA731A6FA252002EF828 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D082DA6E1A6FA252002EF828 /* ViewController.swift in Sources */,
+				D0E7ED771A70F5690055941D /* FuncAndBlockViewController.swift in Sources */,
 				D082DA6C1A6FA252002EF828 /* AppDelegate.swift in Sources */,
 				D082DA8E1A6FA9DF002EF828 /* ViewsController.swift in Sources */,
 				D082DA8C1A6FA260002EF828 /* JEUtilityKit.swift in Sources */,
@@ -413,6 +425,7 @@
 				D082DA871A6FA252002EF828 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D082DA881A6FA252002EF828 /* Build configuration list for PBXNativeTarget "SwiftStudyTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +434,7 @@
 				D082DA8A1A6FA252002EF828 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

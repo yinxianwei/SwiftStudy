@@ -61,6 +61,9 @@ class ViewController: UIViewController,UITableViewDataSource ,UITableViewDelegat
         if(title.isEqualToString("UI控件")){
             viewController = ViewsController()
         }
+        else if(title.isEqualToString("函数和闭包")){
+            viewController = FuncAndBlockViewController()
+        }
         
         if (viewController != nil){
             viewController?.navigationItem.title = title

@@ -116,6 +116,16 @@ class ViewsController: UIViewController,UIAlertViewDelegate,UIActionSheetDelegat
         stepper.value = 5
         stepper.addTarget(self, action: "stepperClick:", forControlEvents: UIControlEvents.ValueChanged)
         scrollview.addSubview(stepper)
+
+//MARK: - 图片
+        var imageView = UIImageView(frame: ccr(0, scrollview.contentSize.height/2, ScreenWidth, VIEW_H(scrollview)))
+        imageView.image = IMG("abc")
+        scrollview.addSubview(imageView)
+        
+//MARK: - webview
+        var webview = UIWebView(frame: ccr(0, scrollview.contentSize.height/2, ScreenWidth, VIEW_H(scrollview)))
+        webview.loadRequest(NSURLRequest(URL: NSURL(string: "http://www.baidu.com")!))
+        scrollview.addSubview(webview)
     }
     
 //MARK: - 事件
