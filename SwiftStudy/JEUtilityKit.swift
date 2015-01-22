@@ -108,8 +108,13 @@ func ccp(__X__:CGFloat,__Y__:CGFloat)-> CGPoint{
 }
 
 func IMG(imageName:NSString)-> UIImage?{
-
     return UIImage(named: imageName)
 }
+
+func FONT(f:CGFloat)-> UIFont{
+    return UIFont.systemFontOfSize(f)
+}
+
+
 
 

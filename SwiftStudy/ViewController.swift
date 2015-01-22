@@ -35,7 +35,7 @@ class ViewController: UIViewController,UITableViewDataSource ,UITableViewDelegat
         tableView?.reloadData()
         
     }
-    
+//MARK: - UITableViewDataSource
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return self.dataArray!.count;
     }
@@ -51,7 +51,7 @@ class ViewController: UIViewController,UITableViewDataSource ,UITableViewDelegat
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator;
         return cell
     }
-    
+//MARK: - UITableViewDelegate
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         var title = self.dataArray![indexPath.section][indexPath.row] as NSString
