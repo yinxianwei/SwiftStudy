@@ -28,7 +28,7 @@ class ViewController: UIViewController,UITableViewDataSource ,UITableViewDelegat
         
 //        self.dataArray?.insertObject("常用控件", atIndex: 0)
         
-        self.dataArray = NSMutableArray(objects: ["UI控件","函数"],["集合","类别"],["扩展","运算"],["继承","代理"])
+        self.dataArray = NSMutableArray(objects: ["UI控件","函数和闭包"],["集合","类别"],["扩展","运算"],["继承","代理"])
         var obj = self.dataArray![0] as NSArray;
         
         
