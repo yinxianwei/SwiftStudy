@@ -58,10 +58,9 @@ class ViewsController: UIViewController,UIAlertViewDelegate,UIActionSheetDelegat
         label.backgroundColor = UIColor.whiteColor()
         label.lineBreakMode = NSLineBreakMode.ByCharWrapping
         scrollview.addSubview(label)
-        
+
 //MARK: - 计算下lab大小
-        var str:NSString = label.text!
-        var size:CGSize = str.stringSize(label.font, lineModel: NSLineBreakMode.ByCharWrapping, size: ccs(VIEW_W(label), 0))
+        var size:CGSize = label.text!.stringSize(label.font, lineModel: NSLineBreakMode.ByCharWrapping, size: ccs(VIEW_W(label), 0))
         label.bounds = ccr(0, 0, size.width, size.height)
 
 //MARK: - 输入框textfield

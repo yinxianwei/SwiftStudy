@@ -34,9 +34,19 @@ extension UIView{
     }
 }
 
+//MARK: - String
+extension String{
+    func stringSize(font:UIFont, lineModel:NSLineBreakMode, size:CGSize)-> CGSize{
+        var text: NSString = NSString(CString: self.cStringUsingEncoding(NSUTF8StringEncoding)!,
+            encoding: NSUTF8StringEncoding)!
+
+        return text.stringSize(font, lineModel: lineModel, size: size)
+    }
+}
+
 //MARK: - NSString
 extension NSString{
-
+    
     func stringSize(font:UIFont, lineModel:NSLineBreakMode, size:CGSize)-> CGSize{
         if (self.length == 0) {
             return ccs(0, 0)
@@ -55,8 +65,22 @@ extension NSString{
         
         return strSize
     }
+    
+    func  removeString(aString:NSString) -> NSString{
+        
+        return  self.stringByReplacingOccurrencesOfString(aString, withString: "")
+    }
+    
+    class func fetchBundleidentifier() -> NSString {
+        
+        return (NSBundle.mainBundle().infoDictionary! as NSDictionary).objectForKey("CFBundleIdentifier") as NSString
+    }
+    
+    class func fetchBundleVersion() -> NSString {
+        
+        return (NSBundle.mainBundle().infoDictionary! as NSDictionary).objectForKey("CFBundleShortVersionString") as NSString
+    }
 }
-
 
 //MARK: - 坐标计算
 func VIEW_W(view:UIView)-> CGFloat{

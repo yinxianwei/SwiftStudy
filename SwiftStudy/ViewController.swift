@@ -28,7 +28,7 @@ class ViewController: UIViewController,UITableViewDataSource ,UITableViewDelegat
         
 //        self.dataArray?.insertObject("常用控件", atIndex: 0)
         
-        self.dataArray = NSMutableArray(objects: ["UI控件","函数和闭包"],["集合","类别"],["扩展","运算"],["继承","代理"])
+        self.dataArray = NSMutableArray(objects: ["UI控件","函数和闭包"],["集合","类别"],["类","运算"],["继承","代理"])
         var obj = self.dataArray![0] as NSArray;
         
         
@@ -64,6 +64,31 @@ class ViewController: UIViewController,UITableViewDataSource ,UITableViewDelegat
         else if(title.isEqualToString("函数和闭包")){
             viewController = FuncAndBlockViewController()
         }
+        else if(title.isEqualToString("集合")){
+            viewController = SetViewController()
+        }
+        
+        else if(title.isEqualToString("类别")){
+            viewController = ClassesViewController()
+        }
+        
+        else if(title.isEqualToString("类")){
+            viewController = CreateClassViewController()
+        }
+        
+        else if(title.isEqualToString("运算")){
+            viewController = OperationViewController()
+        }
+        
+        else if(title.isEqualToString("继承")){
+            viewController = SetViewController()
+        }
+        
+        else if(title.isEqualToString("代理")){
+            viewController = SetViewController()
+        }
+
+        
         
         if (viewController != nil){
             viewController?.navigationItem.title = title
