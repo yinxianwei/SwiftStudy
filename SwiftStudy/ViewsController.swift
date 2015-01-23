@@ -85,7 +85,7 @@ class ViewsController: UIViewController,UIAlertViewDelegate,UIActionSheetDelegat
 
 //MARK: - 旋转
         pageControl.transform = CGAffineTransformMakeRotation(CGFloat(M_PI)/180 * 90);
-        
+
 //MARK: - 滑块
         var  slider = UISlider(frame: ccr(20, VIEW_BY(textView)+30, ScreenWidth - 40, 30))
         slider.minimumValue = 0

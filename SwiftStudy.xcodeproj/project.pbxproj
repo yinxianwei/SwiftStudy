@@ -15,6 +15,8 @@
 		D082DA821A6FA252002EF828 /* SwiftStudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D082DA811A6FA252002EF828 /* SwiftStudyTests.swift */; };
 		D082DA8C1A6FA260002EF828 /* JEUtilityKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D082DA8B1A6FA260002EF828 /* JEUtilityKit.swift */; };
 		D082DA8E1A6FA9DF002EF828 /* ViewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D082DA8D1A6FA9DF002EF828 /* ViewsController.swift */; };
+		D0C627F51A723B0400B43398 /* InheritViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C627F41A723B0400B43398 /* InheritViewController.swift */; };
+		D0C627F71A724C4B00B43398 /* DelegateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C627F61A724C4B00B43398 /* DelegateViewController.swift */; };
 		D0E7ED771A70F5690055941D /* FuncAndBlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E7ED761A70F5690055941D /* FuncAndBlockViewController.swift */; };
 		D0E7ED791A70F5BD0055941D /* abc.gif in Resources */ = {isa = PBXBuildFile; fileRef = D0E7ED781A70F5BD0055941D /* abc.gif */; };
 		D0E7ED7B1A70F6B30055941D /* abc.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E7ED7A1A70F6B30055941D /* abc.png */; };
@@ -47,6 +49,8 @@
 		D082DA811A6FA252002EF828 /* SwiftStudyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftStudyTests.swift; sourceTree = "<group>"; };
 		D082DA8B1A6FA260002EF828 /* JEUtilityKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JEUtilityKit.swift; sourceTree = "<group>"; };
 		D082DA8D1A6FA9DF002EF828 /* ViewsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewsController.swift; sourceTree = "<group>"; };
+		D0C627F41A723B0400B43398 /* InheritViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InheritViewController.swift; sourceTree = "<group>"; };
+		D0C627F61A724C4B00B43398 /* DelegateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateViewController.swift; sourceTree = "<group>"; };
 		D0E7ED761A70F5690055941D /* FuncAndBlockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuncAndBlockViewController.swift; sourceTree = "<group>"; };
 		D0E7ED781A70F5BD0055941D /* abc.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = abc.gif; sourceTree = "<group>"; };
 		D0E7ED7A1A70F6B30055941D /* abc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = abc.png; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 				D082DA671A6FA252002EF828 /* Products */,
 			);
 			sourceTree = "<group>";
+			wrapsLines = 1;
 		};
 		D082DA671A6FA252002EF828 /* Products */ = {
 			isa = PBXGroup;
@@ -142,6 +147,8 @@
 				D0E7ED811A71F00B0055941D /* ClassesViewController.swift */,
 				D0E7ED871A7212F10055941D /* CreateClassViewController.swift */,
 				D0E7ED851A71F9780055941D /* OperationViewController.swift */,
+				D0C627F41A723B0400B43398 /* InheritViewController.swift */,
+				D0C627F61A724C4B00B43398 /* DelegateViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -265,8 +272,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0C627F71A724C4B00B43398 /* DelegateViewController.swift in Sources */,
 				D0E7ED861A71F9780055941D /* OperationViewController.swift in Sources */,
 				D082DA6E1A6FA252002EF828 /* ViewController.swift in Sources */,
+				D0C627F51A723B0400B43398 /* InheritViewController.swift in Sources */,
 				D0E7ED7D1A71E83F0055941D /* SetViewController.swift in Sources */,
 				D0E7ED771A70F5690055941D /* FuncAndBlockViewController.swift in Sources */,
 				D082DA6C1A6FA252002EF828 /* AppDelegate.swift in Sources */,
@@ -396,7 +405,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = SwiftStudy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -406,7 +417,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = SwiftStudy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

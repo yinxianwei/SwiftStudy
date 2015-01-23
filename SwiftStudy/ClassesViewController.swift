@@ -24,6 +24,7 @@ class ClassesViewController: UIViewController {
         str = str.removeString("text")
         
         println("\(str)")
+        
 
     }
 
@@ -47,6 +48,9 @@ class ClassesViewController: UIViewController {
 
 extension String{
     
-    
+  static  var lll: String{
+       return "xxxx"
+    }
+
     
 }

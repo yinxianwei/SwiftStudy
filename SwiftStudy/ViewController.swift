@@ -17,6 +17,7 @@ class ViewController: UIViewController,UITableViewDataSource ,UITableViewDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
 //        self.dataArray = NSMutableArray(array: [NSString]())
         
         tableView = UITableView(frame: CGRectMake(0, 0, ScreenWidth, ScreenHeight), style: UITableViewStyle.Grouped)
@@ -81,11 +82,11 @@ class ViewController: UIViewController,UITableViewDataSource ,UITableViewDelegat
         }
         
         else if(title.isEqualToString("继承")){
-            viewController = SetViewController()
+            viewController = InheritViewController()
         }
         
         else if(title.isEqualToString("代理")){
-            viewController = SetViewController()
+            viewController = DelegateViewController()
         }
 
         
