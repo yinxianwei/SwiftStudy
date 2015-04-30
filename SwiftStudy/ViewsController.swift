@@ -138,7 +138,7 @@ class ViewsController: UIViewController,UIAlertViewDelegate,UIActionSheetDelegat
     func switchChanged(swi:UISwitch){
         
         println("---->>\(swi.on)")
-        var activity = self.view.viewWithTag(103) as UIActivityIndicatorView
+        var activity = self.view.viewWithTag(103) as! UIActivityIndicatorView
       
         if(swi.on){
             activity.startAnimating()
@@ -162,7 +162,7 @@ class ViewsController: UIViewController,UIAlertViewDelegate,UIActionSheetDelegat
         var f = CGFloat(slider.value/100.0)
         view?.alpha = f
 
-        var progressview = self.view.viewWithTag(102) as UIProgressView
+        var progressview = self.view.viewWithTag(102) as! UIProgressView
         progressview.setProgress(Float(f), animated: true)
     }
     
@@ -179,7 +179,7 @@ class ViewsController: UIViewController,UIAlertViewDelegate,UIActionSheetDelegat
 
         var index = scrollView.contentOffset.y/VIEW_H(scrollView)
      
-        var pageControl = self.view.viewWithTag(100) as UIPageControl
+        var pageControl = self.view.viewWithTag(100) as! UIPageControl
         
         pageControl.currentPage = Int(index)
     }

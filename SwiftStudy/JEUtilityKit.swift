@@ -19,6 +19,7 @@ let ScreenWidth = UIScreen.mainScreen().bounds.size.width
 
 //MARK: - UIView
 extension UIView{
+    
     func height()-> CGFloat{
         return self.frame.size.height;
     }
@@ -61,24 +62,24 @@ extension NSString{
         
         var attribute:NSDictionary = [NSFontAttributeName:font,NSParagraphStyleAttributeName:paragraphStyle]
         
-        var strSize:CGSize = self.boundingRectWithSize(ccs(size.width, size_h), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: attribute, context: nil).size
+        var strSize:CGSize = self.boundingRectWithSize(ccs(size.width, size_h), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: attribute as [NSObject : AnyObject], context: nil).size
         
         return strSize
     }
     
     func  removeString(aString:NSString) -> NSString{
         
-        return  self.stringByReplacingOccurrencesOfString(aString, withString: "")
+        return  self.stringByReplacingOccurrencesOfString(aString as String, withString: "")
     }
     
     class func fetchBundleidentifier() -> NSString {
         
-        return (NSBundle.mainBundle().infoDictionary! as NSDictionary).objectForKey("CFBundleIdentifier") as NSString
+        return (NSBundle.mainBundle().infoDictionary! as NSDictionary).objectForKey("CFBundleIdentifier") as! NSString
     }
     
     class func fetchBundleVersion() -> NSString {
         
-        return (NSBundle.mainBundle().infoDictionary! as NSDictionary).objectForKey("CFBundleShortVersionString") as NSString
+        return (NSBundle.mainBundle().infoDictionary! as NSDictionary).objectForKey("CFBundleShortVersionString") as! NSString
     }
 }
 
@@ -132,7 +133,7 @@ func ccp(__X__:CGFloat,__Y__:CGFloat)-> CGPoint{
 }
 
 func IMG(imageName:NSString)-> UIImage?{
-    return UIImage(named: imageName)
+    return UIImage(named: imageName as String)
 }
 
 func FONT(f:CGFloat)-> UIFont{

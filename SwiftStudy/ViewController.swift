@@ -30,7 +30,7 @@ class ViewController: UIViewController,UITableViewDataSource ,UITableViewDelegat
 //        self.dataArray?.insertObject("常用控件", atIndex: 0)
         
         self.dataArray = NSMutableArray(objects: ["UI控件","函数和闭包"],["集合","类别"],["类","运算"],["继承","代理"])
-        var obj = self.dataArray![0] as NSArray;
+
         
         
         tableView?.reloadData()
@@ -47,15 +47,15 @@ class ViewController: UIViewController,UITableViewDataSource ,UITableViewDelegat
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyTestCell")
-        var title = self.dataArray![indexPath.section][indexPath.row] as NSString
-        cell.textLabel.text = title;
+        var title = self.dataArray![indexPath.section][indexPath.row] as! NSString
+        cell.textLabel?.text = title as String;
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator;
         return cell
     }
 //MARK: - UITableViewDelegate
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        var title = self.dataArray![indexPath.section][indexPath.row] as NSString
+        var title = self.dataArray![indexPath.section][indexPath.row] as! NSString
 
         var viewController:UIViewController?
         
@@ -92,7 +92,7 @@ class ViewController: UIViewController,UITableViewDataSource ,UITableViewDelegat
         
         
         if (viewController != nil){
-            viewController?.navigationItem.title = title
+            viewController?.navigationItem.title = title as String
             self.navigationController?.pushViewController(viewController!, animated: true)
         }
 

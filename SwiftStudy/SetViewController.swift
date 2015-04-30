@@ -65,5 +65,106 @@ class SetViewController: UIViewController {
         
         set.addObject("1")
         
+        
+        //数组遍历
+        // 1> 闭区间循环，从1循环到10
+        var array5 = NSMutableArray();
+        for i in 1...10 {
+            
+            array5.insertObject(NSString(format: "%d", i), atIndex: 0);
+            
+        }
+        // 2> 开区间循环，从1循环到9
+        for i in 1..<10 {
+            
+            array5.insertObject(NSString(format: "%d", i), atIndex: 0);
+            
+        }
+        
+        // 3> 如果不需要知道区间内每一项的值，可以使用下划线(_)替代变量名，忽略对区间数值的访问
+        
+       var num = 0
+        
+        for _ in 1...10 {
+            
+            num++
+            
+        }
+        
+        //遍历字典
+        
+        var ageDict:Dictionary<String, Int> = ["mary": 19, "rose": 20]
+       
+        var names = [String]()
+        
+        var ages = [Int]()
+        
+        for (key, value) in ageDict {
+            
+            names.append(key)
+            
+            ages.append(value)  
+            
+        }
+        
+        
+        var keys = [String]()
+        
+        var values = [String]()
+        
+        var dict1 = ["name": "mike", "age": "18"];
+        
+        for (name, age) in dict1 {
+            
+            keys.append(name)  
+            
+            values.append(age)  
+            
+        }
+
+        // 使用标签退出循环
+        
+        // 使用标签的其中1个作用是：可以明确指定要退出哪个循环，以下示例是退出名字为"mainloop"的循环
+        
+        var result = 1;
+        
+        mainloop : for i in 1...5 {
+            
+            for j in 1...5 {
+                
+                result += j
+                
+                
+                
+                if (i == 3 && j == 3) {  
+                    
+                    break mainloop  
+                    
+                }  
+                
+            }  
+            
+        }
+        
+        //数组倒序
+        var array7 =  NSMutableArray(array: ["1", "2", "3", "4", "5", "6", ]);
+
+        println(array7);
+        
+        
+         println(array7.reverseObjectEnumerator().allObjects);
+        
+        
+        
+        
+        
+        
+    }
+    
+    func compare(obj : AnyObject)->AnyObject{
+        
+        
+        
+        return obj;
     }
 }

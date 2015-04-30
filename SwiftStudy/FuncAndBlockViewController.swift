@@ -78,6 +78,6 @@ class FuncAndBlockViewController: UIViewController {
     
     //MARK: - 有返回和传入参数的闭包
     func aBlock(block:()->(NSString), block2:(str: NSString)->()){
-        block2(str: block()+"___加个小尾巴")
+        block2(str: (block() as String)+"___加个小尾巴")
     }
 }
