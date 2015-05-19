@@ -147,11 +147,13 @@ class SetViewController: UIViewController {
         }
         
         //数组倒序
-        var array7 =  NSMutableArray(array: ["1", "2", "3", "4", "5", "6", ]);
+        var array7 =  NSMutableArray(array: ["R", "Z", "A", "C", "S", "Q","热" ]);
 
         println(array7);
+
+        var xx = array7.sortedArrayUsingSelector(Selector("compare:"));
         
-        
+        println(xx)
          println(array7.reverseObjectEnumerator().allObjects);
         
         
